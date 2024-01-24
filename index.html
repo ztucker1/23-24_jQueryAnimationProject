@@ -9,10 +9,10 @@
     <!-- jQuery Include -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
-        #redBox {
+        #spider {
             width: 100px;
             height: 100px;
-            background-color: red;
+            background-color: white;
             position: absolute;
             left: 500px;
             top: 400px;
@@ -36,7 +36,11 @@
             top: 0px;
             display: none;
         }
-
+        img1 {
+            width: 500px;
+            height: 400px;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -44,7 +48,10 @@
 
     <div class="row">
         <div class="col-12">
-            <div id="redBox"></div>
+            <img src="images/gutter.jpg" id="img1" alt="gutter" height="500" width="400"/>
+            <h2>ITSY BITSY SPIDER</h2>
+            <h5>Click the spider to begin!</h5>
+            <div id="spider"><img src="images/spider.jpg" id="img2"/></div>
             <div id="rain" ></div>
             <div id="sun" ></div>
             <!--<div id="gutter"> <img src="images/gutter.jpg" id="img1"/></div>
@@ -61,26 +68,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function() {
-        $("#redBox").click(function (){
-            $("#redBox").animate({
-                left: '250',
+        $("#spider").click(function (){
+            $("#spider").animate({
+                left: '350',
             });
-            $("#redBox").animate({
+            $("#spider").animate({
                 top: '200',
             });
-            $("#rain").show(2000);
-            $("#redBox").animate({
+
+            $("#rain").show(2000).delay(500);
+            $("#spider").animate({
                 top: '400',
             });
-            $("#redBox").animate({
+            $("#spider").animate({
                 left: '500',
-            });
-            $("#sun").show(2000);
+            }).delay(2000);
+            $("#sun").show(2000).delay(5000);
             $("#rain").hide(2000);
-            $("#redBox").animate({
-                left: '250',
+            $("#spider").animate({
+                left: '350',
             });
-            $("#redBox").animate({
+            $("#spider").animate({
                 top: '200',
             });
 
